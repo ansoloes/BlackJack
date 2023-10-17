@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blackjack</title>
+    <!--  Hojas de estilos -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <!--  Fuentes -->
+    <!-- Principal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Títulos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <h1>Blackjack</i></h1>
+      <nav class="navbar">
+        <button class="btn btn-reinicio" id="btn-reinicio">Nuevo Juego</button>
+        <button class="btn btn-cartas" id="btn-cartas" disabled="disabled">Pedir Carta</button>
+        <button class="btn btn-detener" id="btn-detener" disabled="disabled">Detener</button>
+      </nav>
+    </header>
+    <main>
+      <article class="jugador">
+        <div class="contenedor-jugador">
+          <h2>Jugador/a: <span id="puntuacion-jugador">0 pts.</span></h2>
+        </div>
+        <div class="contenedor-cartas" id="cartas-jugador">
+
+        </div>
+      </article>
+
+      <article class="computadora">
+        <div class="contenedor-jugador">
+          <h2>Computadora: <span id="puntuacion-computadora">0 pts.</span></h2>
+        </div>
+        <div class="contenedor-cartas" id="cartas-computadora">
+
+        </div>
+      </article>
+    </main>
+    <div class="modal cerrar-modal" id="modal">
+      <h2>Blackjack:</h2>
+      <p id="mensaje-modal">¡Ganaste! Prueba tu suerte nuevamente</p>
+      <button class="btn btn-detener" id="btn-cerrar-modal">Cerrar</button>
+    </div>
+    <!-- TODO Intrucciones del juego al cargar la página -->
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/a90d1ac3f5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/underscore-min.js"></script>
+    <script src="./assets/js/juego.js"></script>
+    <script>
+      console.log(moduloBlackJack);
+      moduloBlackJack.nuevoJuego();
+    </script>
+  </body>
+</html>
