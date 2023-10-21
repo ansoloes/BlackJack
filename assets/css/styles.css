@@ -4,6 +4,7 @@
   --amarillo: #ffca58;
   --blanco: #fff;
   --negro: #000;
+  --gris: #b0b0b0;
 
   --principal: 'Poppins', sans-serif;
   --titulos: 'VT323', monospace;
@@ -32,9 +33,9 @@ html {
 body {
   font-family: var(--principal);
   font-size: 1.6rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./assets/img/background.jpg);
   background-size: cover;
-  height: 100vh;
+  background-repeat: no-repeat;
 }
 
 .btn {
@@ -68,8 +69,13 @@ h3 {
   border-radius: .8rem;
   box-shadow: var(--sombra-contenedores);
   position: absolute;
-  bottom: 70vh;
-  left: 42%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60rem;
+  margin: auto;
+  z-index: 999;
+  height: 24rem;
 }
 
 .modal h2 {
@@ -97,6 +103,7 @@ header {
   padding: 1.6rem;
   box-shadow: var(--sombra);
   z-index: 1;
+  position: sticky;
 }
 
 header h1 {
@@ -131,7 +138,7 @@ header h1 i {
 }
 
 main {
-  height: 88%;
+  height: 88.8vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,7 +152,8 @@ main {
   box-shadow: var(--sombra-contenedores);
   width: 45%;
   height: 35rem;
-  border-radius: .8rem;
+  border-top-left-radius: .8rem;
+  border-top-right-radius: .8rem;
   background-color: var(--blanco);
 }
 
@@ -167,6 +175,19 @@ main {
 .contenedor-cartas {
   display: flex;
   padding: 4.8rem 2.4rem;
+  overflow-x: scroll;
+}
+
+.contenedor-cartas::-webkit-scrollbar {
+  height: 1rem;
+  background-color: var(--blanco);
+  border-bottom-left-radius: .8rem;
+  border-bottom-right-radius: .8rem;
+}
+
+.contenedor-cartas::-webkit-scrollbar-thumb {
+  background-color: var(--gris);
+  border-radius: .8rem;
 }
 
 .carta {
@@ -196,4 +217,39 @@ main {
 .carta:nth-child(6) {
   position: relative;
   right: 32rem;
+}
+
+@media (max-width: 1100px) {
+  main {
+    padding: 12rem 0;
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    flex-direction: column;
+    gap: 2.4rem;
+    padding: 4.8rem 0;
+    height: 100vh;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .navbar {
+    margin-top: 1.6rem;
+  }
+
+  .jugador,
+  .computadora {
+    width: 80%;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    flex-direction: column;
+    margin-top: 1.6rem;
+  }
 }
