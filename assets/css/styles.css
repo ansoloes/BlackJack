@@ -72,7 +72,7 @@ h3 {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 60rem;
+  bottom: 50rem;
   margin: auto;
   z-index: 999;
   height: 24rem;
@@ -152,8 +152,7 @@ main {
   box-shadow: var(--sombra-contenedores);
   width: 45%;
   height: 35rem;
-  border-top-left-radius: .8rem;
-  border-top-right-radius: .8rem;
+  border-radius: .8rem;
   background-color: var(--blanco);
 }
 
@@ -175,14 +174,13 @@ main {
 .contenedor-cartas {
   display: flex;
   padding: 4.8rem 2.4rem;
-  overflow-x: scroll;
+  overflow-x: auto;
 }
 
 .contenedor-cartas::-webkit-scrollbar {
   height: 1rem;
   background-color: var(--blanco);
-  border-bottom-left-radius: .8rem;
-  border-bottom-right-radius: .8rem;
+  border-radius: .8rem;
 }
 
 .contenedor-cartas::-webkit-scrollbar-thumb {
